@@ -18,7 +18,7 @@ const ImageSlider = ({ images }) => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={3}
+        slidesPerView={'auto'}
         initialSlide={1}
         coverflowEffect={{
           rotate: 0,
@@ -35,12 +35,23 @@ const ImageSlider = ({ images }) => {
           bulletActiveClass: 'swiper-pagination-bullet-active',
         }}
         navigation={true}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="h-[400px] !pb-8" // Reduced height and added padding bottom
       >
         {images.map((image) => (
           <SwiperSlide key={image.id} className="flex items-center justify-center">
-            <div className="aspect-square w-[300px] overflow-hidden rounded-lg shadow-2xl">
+            <div className="aspect-square w-[200px] sm:w-[300px] overflow-hidden rounded-lg shadow-2xl">
               <img
                 src={image.src}
                 alt={image.alt}

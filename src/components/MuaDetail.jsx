@@ -85,7 +85,7 @@ const MuaDetail = () => {
             <h2 className="font-['Playfair_Display'] text-2xl font-semibold text-gray-800 mb-4">
               Contact Me
             </h2>
-            <div className="flex gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <a
                 href="https://instagram.com/vanessa_sacchetto_mua"
                 target="_blank"
@@ -93,14 +93,14 @@ const MuaDetail = () => {
                 className="flex items-center gap-2 text-gray-700 hover:text-pink-500 transition-colors"
               >
                 <FaInstagram size={24} />
-                <span className="font-['Poppins']">@vanessa_sacchetto_mua</span>
+                <span className="font-['Poppins'] text-sm sm:text-base">@vanessa_sacchetto_mua</span>
               </a>
               <a
-                href="mailto:vanessa.mua@email.com"
+                href="mailto:vanessasacchetto@icloud.com"
                 className="flex items-center gap-2 text-gray-700 hover:text-pink-500 transition-colors"
               >
                 <MdEmail size={24} />
-                <span className="font-['Poppins']">
+                <span className="font-['Poppins'] text-sm sm:text-base">
                   vanessasacchetto@icloud.com
                 </span>
               </a>
