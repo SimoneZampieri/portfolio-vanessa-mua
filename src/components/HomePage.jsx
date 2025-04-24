@@ -1,12 +1,8 @@
 import React from "react";
-import { useGlobalContext } from "../context/GlobalContext";
-import ImageSlider from "./ImageSlider";
 import Gallery from "./Gallery";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  const { swiperImages } = useGlobalContext();
-
   return (
     <div className="relative w-full mx-auto">
       <div className="max-w-7xl mx-auto px-12 py-8">
@@ -14,11 +10,11 @@ const HomePage = () => {
           <h1 className="font-['Playfair_Display'] text-6xl font-bold text-gray-800 mb-4 tracking-wide">
             Vanessa Sacchetto
           </h1>
-          <p className="font-['Playfai_Display'] text-xl text-pink-500/80 uppercase tracking-widest">
+          <p className="font-['Playfair_Display'] text-xl text-pink-500/80 uppercase tracking-widest">
             Professional Makeup Artist
           </p>
         </div>
-        <ImageSlider images={swiperImages} />
+        
         <div className="text-center mt-12 mb-16">
           <Link
             to="/detail"

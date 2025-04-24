@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import { useGlobalContext } from "../context/GlobalContext";
+import ImageModal from "./ImageModal";
 
 const Gallery = () => {
+  const { swiperImages } = useGlobalContext();
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const galleryImages = [
-    { id: 1, src: "/IMG_7041.JPG", alt: "Makeup Work 1" },
-    { id: 2, src: "/IMG_7045.JPG", alt: "Makeup Work 2" },
-    { id: 3, src: "/IMG_7050.JPG", alt: "Makeup Work 3" },
-    { id: 4, src: "/IMG_7052.JPG", alt: "Makeup Work 4" },
-    { id: 5, src: "/IMG_7053.JPG", alt: "Makeup Work 5" },
-    { id: 6, src: "/IMG_7057.JPG", alt: "Makeup Work 6" },
-    { id: 7, src: "/IMG_7059.JPG", alt: "Makeup Work 7" },
-    { id: 8, src: "/IMG_7062.JPG", alt: "Makeup Work 8" },
-    { id: 9, src: "/IMG_7065.JPG", alt: "Makeup Work 9" },
-    { id: 10, src: "/IMG_7067.JPG", alt: "Makeup Work 10" },
-    { id: 11, src: "/IMG_7068.JPG", alt: "Makeup Work 11" },
-    { id: 12, src: "/IMG_7069.JPG", alt: "Makeup Work 12" },
-    { id: 13, src: "/IMG_7073.JPG", alt: "Makeup Work 13" },
-    { id: 14, src: "/IMG_7074.JPG", alt: "Makeup Work 14" },
+    { id: 1, src: "/IMG_7041.jpg", alt: "Makeup Work 1" },
+    { id: 2, src: "/IMG_7045.jpg", alt: "Makeup Work 2" },
+    { id: 3, src: "/IMG_7050.jpg", alt: "Makeup Work 3" },
+    { id: 4, src: "/IMG_7052.jpg", alt: "Makeup Work 4" },
+    { id: 5, src: "/IMG_7053.jpg", alt: "Makeup Work 5" },
+    { id: 6, src: "/IMG_7057.jpg", alt: "Makeup Work 6" },
+    { id: 7, src: "/IMG_7059.jpg", alt: "Makeup Work 7" },
+    { id: 8, src: "/IMG_7062.jpg", alt: "Makeup Work 8" },
+    { id: 9, src: "/IMG_7065.jpg", alt: "Makeup Work 9" },
+    { id: 10, src: "/IMG_7067.jpg", alt: "Makeup Work 10" },
+    { id: 11, src: "/IMG_7068.jpg", alt: "Makeup Work 11" },
+    { id: 12, src: "/IMG_7069.jpg", alt: "Makeup Work 12" },
+    { id: 13, src: "/IMG_7073.jpg", alt: "Makeup Work 13" },
+    { id: 14, src: "/IMG_7074.jpg", alt: "Makeup Work 14" },
+    ...swiperImages,
   ];
 
   // Create four columns for the masonry layout
@@ -40,13 +46,21 @@ const Gallery = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-auto rounded-lg shadow-lg transition-all duration-300 group-hover:brightness-90"
+                  className="w-full h-auto rounded-lg shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                  onClick={() => setSelectedImage(image)}
                 />
               </div>
             ))}
           </div>
         ))}
       </div>
+
+      {selectedImage && (
+        <ImageModal
+          image={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
     </div>
   );
 };
