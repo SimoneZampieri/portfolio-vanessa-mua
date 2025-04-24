@@ -14,7 +14,7 @@ const HomePage = () => {
           <h1 className="font-['Playfair_Display'] text-6xl font-bold text-gray-800 mb-4 tracking-wide">
             Vanessa Sacchetto
           </h1>
-          <p className="font-['Poppins'] text-xl text-pink-500/80 uppercase tracking-widest">
+          <p className="font-['Playfai_Display'] text-xl text-pink-500/80 uppercase tracking-widest">
             Professional Makeup Artist
           </p>
         </div>
