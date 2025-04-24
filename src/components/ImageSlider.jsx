@@ -13,7 +13,7 @@ const ImageSlider = ({ images }) => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="w-full">
+    <div className="w-full px-4 sm:px-0">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -24,7 +24,7 @@ const ImageSlider = ({ images }) => {
           rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 2.5,
+          modifier: 1.5,
           slideShadows: false,
         }}
         pagination={{
@@ -34,24 +34,36 @@ const ImageSlider = ({ images }) => {
           bulletClass: 'swiper-pagination-bullet',
           bulletActiveClass: 'swiper-pagination-bullet-active',
         }}
-        navigation={true}
+        navigation={{
+          enabled: false,
+          hideOnClick: true,
+        }}
         breakpoints={{
           320: {
             slidesPerView: 1,
+            navigation: {
+              enabled: false,
+            },
           },
-          640: {
+          768: {
             slidesPerView: 2,
+            navigation: {
+              enabled: true,
+            },
           },
           1024: {
             slidesPerView: 3,
+            navigation: {
+              enabled: true,
+            },
           },
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
-        className="h-[400px] !pb-8" // Reduced height and added padding bottom
+        className="h-[400px] !pb-8"
       >
         {images.map((image) => (
-          <SwiperSlide key={image.id} className="flex items-center justify-center">
-            <div className="aspect-square w-[200px] sm:w-[300px] overflow-hidden rounded-lg shadow-2xl">
+          <SwiperSlide key={image.id} className="flex items-center justify-center px-2 sm:px-0">
+            <div className="aspect-square w-[250px] sm:w-[300px] overflow-hidden rounded-lg shadow-2xl">
               <img
                 src={image.src}
                 alt={image.alt}
