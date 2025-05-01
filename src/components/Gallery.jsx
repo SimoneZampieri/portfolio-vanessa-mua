@@ -3,7 +3,6 @@ import { useGlobalContext } from "../context/GlobalContext";
 import ImageModal from "./ImageModal";
 
 const Gallery = () => {
-  const { swiperImages } = useGlobalContext();
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
