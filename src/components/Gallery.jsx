@@ -7,21 +7,21 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
-    { id: 1, src: "/IMG_7041.JPG", alt: "Makeup Work 1" },
-    { id: 2, src: "/IMG_7045.JPG", alt: "Makeup Work 2" },
-    { id: 3, src: "/IMG_7050.JPG", alt: "Makeup Work 3" },
-    { id: 4, src: "/IMG_7052.JPG", alt: "Makeup Work 4" },
-    { id: 5, src: "/IMG_7053.JPG", alt: "Makeup Work 5" },
-    { id: 6, src: "/IMG_7057.JPG", alt: "Makeup Work 6" },
-    { id: 7, src: "/IMG_7059.JPG", alt: "Makeup Work 7" },
-    { id: 8, src: "/IMG_7062.JPG", alt: "Makeup Work 8" },
-    { id: 9, src: "/IMG_7065.JPG", alt: "Makeup Work 9" },
-    { id: 10, src: "/IMG_7067.JPG", alt: "Makeup Work 10" },
-    { id: 11, src: "/IMG_7068.JPG", alt: "Makeup Work 11" },
-    { id: 12, src: "/IMG_7069.JPG", alt: "Makeup Work 12" },
-    { id: 13, src: "/IMG_7073.JPG", alt: "Makeup Work 13" },
-    { id: 14, src: "/IMG_7074.JPG", alt: "Makeup Work 14" },
-    ...swiperImages,
+    { id: 1, src: "/A.JPG", alt: "Makeup Work 1" },
+    { id: 2, src: "/B.JPG", alt: "Makeup Work 2" },
+    { id: 3, src: "/C.JPG", alt: "Makeup Work 3" },
+    { id: 4, src: "/D.JPG", alt: "Makeup Work 4" },
+    { id: 5, src: "/E.JPG", alt: "Makeup Work 5" },
+    { id: 6, src: "/F.JPG", alt: "Makeup Work 6" },
+    { id: 7, src: "/G.JPG", alt: "Makeup Work 7" },
+    { id: 8, src: "/H.JPG", alt: "Makeup Work 8" },
+    { id: 9, src: "/I.JPG", alt: "Makeup Work 9" },
+    { id: 10, src: "/L.JPG", alt: "Makeup Work 10" },
+    { id: 11, src: "/M.JPG", alt: "Makeup Work 11" },
+    { id: 12, src: "/N.JPG", alt: "Makeup Work 12" },
+    { id: 13, src: "/O.PNG", alt: "Makeup Work 13" },
+    { id: 14, src: "/P.jpeg", alt: "Makeup Work 14" },
+    { id: 15, src: "/Q.JPG", alt: "Makeup Work 15" },
   ];
 
   // Create four columns for the masonry layout
