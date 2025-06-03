@@ -10,7 +10,7 @@ const Gallery = () => {
     { id: 2, src: "/B.JPG", alt: "Makeup Work 2" },
     { id: 3, src: "/C.JPG", alt: "Makeup Work 3" },
     { id: 4, src: "/D.JPG", alt: "Makeup Work 4" },
-    { id: 5, src: "/E.JPG", alt: "Makeup Work 5" },
+    { id: 5, src: "/schon.jpg", alt: "Makeup Work 5" },
     { id: 6, src: "/F.JPG", alt: "Makeup Work 6" },
     { id: 7, src: "/G.JPG", alt: "Makeup Work 7" },
     { id: 8, src: "/H.JPG", alt: "Makeup Work 8" },
@@ -21,7 +21,7 @@ const Gallery = () => {
     { id: 13, src: "/O.PNG", alt: "Makeup Work 13" },
     { id: 14, src: "/P.jpeg", alt: "Makeup Work 14" },
     { id: 15, src: "/Q.JPG", alt: "Makeup Work 15" },
-    { id: 16, src: "/schon.jpg", alt: "Makeup Work 16" },
+    { id: 16, src: "/E.JPG", alt: "Makeup Work 16" },
   ];
 
   // Create four columns for the masonry layout
