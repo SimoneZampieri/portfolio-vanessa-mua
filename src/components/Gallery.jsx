@@ -21,6 +21,7 @@ const Gallery = () => {
     { id: 13, src: "/O.PNG", alt: "Makeup Work 13" },
     { id: 14, src: "/P.jpeg", alt: "Makeup Work 14" },
     { id: 15, src: "/Q.JPG", alt: "Makeup Work 15" },
+    { id: 16, src: "/schon.jpg", alt: "Makeup Work 16" },
   ];
 
   // Create four columns for the masonry layout
